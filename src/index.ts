@@ -14,25 +14,23 @@ import {
 export class FuRong {
   token: string = ''
   constructor() { }
-  // @ts-ignore
-  async login(username: string, password: string): Promise<LoginResult> {
-    this.token = 'hrbPGIzmhoUJX7vgz8Pv44f1pel3Gtm+6q5BWtsWB9+/zladypd82y8zU1b5+LJhupSP/Ib/Stu3H/0j5E6fS32iSJMiFjZORI8KZs/IqBRylgcDmh29i2hOCfjOWnKNRhERMJoqZ1AtV3DaWehFuUFUaCBZUNHQGM7e+a7P2+w='
-    // try {
-    //   const result = await request<LoginResult>({
-    //     method: 'GET',
-    //     url: '/login',
-    //     params: {
-    //       username,
-    //       password
-    //     }
-    //   })
-    //   this.token = result.token
-    //   return result
-    // } catch (e) {
-    //   return null
-    // }
+  async login(username: string, password: string): Promise<LoginResult | null> {
+    try {
+      const result = await request<LoginResult>({
+        method: 'GET',
+        url: '/login',
+        params: {
+          username,
+          password
+        }
+      })
+      this.token = result.result.token
+      return result
+    } catch (e) {
+      return null
+    }
   }
-  async balance(): Promise<GetBalanceResult> {
+  async balance(): Promise<GetBalanceResult | null> {
     try {
       const result = await request<GetBalanceResult>({
         method: 'GET',
@@ -46,7 +44,7 @@ export class FuRong {
       return null
     }
   }
-  async getMobile(data: GetMobile): Promise<GetMobileResult> {
+  async getMobile(data: GetMobile): Promise<GetMobileResult | null> {
     try {
       const result = await request<GetMobileResult>({
         method: 'GET',
@@ -62,7 +60,7 @@ export class FuRong {
       return null
     }
   }
-  async getMessageCode(data: GetMessageCode): Promise<GetMessageCodeResult> {
+  async getMessageCode(data: GetMessageCode): Promise<GetMessageCodeResult |  null> {
     try {
       const result = await request<GetMessageCodeResult>({
         method: 'GET',
@@ -77,7 +75,7 @@ export class FuRong {
       return null
     }
   }
-  async releaseMobile(data: ReleaseMobile): Promise<boolean> {
+  async releaseMobile(data: ReleaseMobile): Promise<boolean | null> {
     try {
       const result = await request<BaseResponse>({
         method: 'GET',
@@ -92,7 +90,7 @@ export class FuRong {
       return null
     }
   }
-  async addBlockMobile(data: AddBlockMobile): Promise<boolean> {
+  async addBlockMobile(data: AddBlockMobile): Promise<boolean | null> {
     try {
       const result = await request<BaseResponse>({
         method: 'GET',

@@ -1,4 +1,11 @@
-import { FuRong } from '../index'
+## Install 
+```bash
+yarn add furongyun
+```
+
+## Example
+```typescript
+import { FuRong } from 'furongyun'
 
 const furong = new FuRong()
 
@@ -31,3 +38,4 @@ async function main() {
   console.log('releaseInfo', releaseInfo)
 }
 main()
+```

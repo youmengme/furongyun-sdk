@@ -4,9 +4,22 @@ export interface UserInfo {
   id: string
   leixing: string
 }
+
+export interface Result {
+  token:          string;
+  userType:       string;
+  vipGrade:       string;
+  balance:        string;
+  taskCount:      null;
+  autoCollection: null;
+  lastLoginIp:    string;
+  lastLoginTime:  number;
+}
+
 export interface LoginResult {
-  data: UserInfo[]
-  message: string
+  code:    number;
+  message: string;
+  result:  Result;
 }
 
 export interface GetBalanceResult {
