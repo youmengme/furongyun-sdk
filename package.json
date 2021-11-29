@@ -1,6 +1,9 @@
 {
   "name": "furongyun",
   "version": "1.0.1",
+  "workspaces": [
+    "./dist"
+  ],
   "description": "",
   "main": "index.ts",
   "scripts": {
