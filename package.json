@@ -5,14 +5,16 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "./node_modules/.bin/tsc ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^16.11.10",
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "typescript": "^4.5.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
