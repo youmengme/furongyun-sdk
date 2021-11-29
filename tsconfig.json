@@ -10,7 +10,6 @@
       "target": "es6",
       "outDir": "./dist",
       "baseUrl": "./",
-      "typeRoots": ["./typings", "node_modules/@types"],
       "resolveJsonModule": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
@@ -19,7 +18,11 @@
       "moduleResolution": "node",
       "sourceMap": true,
       "lib": ["esnext"],
-      "rootDir": "./"
+      "rootDir": "./",
+      "typeRoots": [
+        "node_modules/@types",
+        "src/typings/*.d.ts"
+      ],
     },
     "include": ["src/**/*.ts", "index.ts"],
     "exclude": [
