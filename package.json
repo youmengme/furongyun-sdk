@@ -1,11 +1,9 @@
 {
   "name": "furongyun",
   "version": "1.0.3",
-  "workspaces": [
-    "./dist"
-  ],
   "description": "",
   "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +13,10 @@
   "dependencies": {
     "@types/node": "^16.11.10",
     "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^18.0.1"
   }
 }
