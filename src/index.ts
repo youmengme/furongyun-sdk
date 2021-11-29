@@ -54,7 +54,6 @@ export class FuRong {
           token: this.token
         }
       })
-      console.log('resultresultresultresultresult', result)
       return result
     } catch (e) {
       return null
