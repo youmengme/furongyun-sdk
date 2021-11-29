@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: 15
       
+      - name: Install
+        run: npm i yarn -g && yarn     
+      
       - name: Build
-        run: npm run build
+        run: yarn build
       
       - name: Release
         env:
