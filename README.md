@@ -42,5 +42,5 @@ main()
 
 ## 引用
 
-[使用Github Actions自动化发布npm包的探索](https://www.cnblogs.com/xueyubao/p/14823168.html)
-[官方文档](https://www.showdoc.com.cn/1598819599478624/7605738097566749)
+- [使用Github Actions自动化发布npm包的探索](https://www.cnblogs.com/xueyubao/p/14823168.html)
+- [官方文档](https://www.showdoc.com.cn/1598819599478624/7605738097566749)
