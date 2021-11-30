@@ -24,9 +24,11 @@ export class FuRong {
           password
         }
       })
-      this.token = result.result.token
+      console.log('result', result)
+      this.token = result.token
       return result
     } catch (e) {
+      console.log('e', e)
       return null
     }
   }
